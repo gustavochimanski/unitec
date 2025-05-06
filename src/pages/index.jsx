@@ -1,4 +1,4 @@
-import Hero from "../Components/Hero";
+import Hero from "@/Components/Hero";
 import ProblemsSection from "../Components/ProblemsSection";
 import ComoFazemosDiferenca from "../Components/ComoFazemosDiferença";
 import FuncionalidadesPoderosas from "../Components/FuncionalidadesPoderosas";
