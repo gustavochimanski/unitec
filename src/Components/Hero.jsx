@@ -79,7 +79,7 @@ const Hero = () => {
           {/* Text */}
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-indigo-800 leading-tight">
-              ERP completo para mercados e comércios: rápido, simples e poderoso.
+              Sistema de gestão para supermercados, e comércios no geral
             </h1>
             <p className="text-lg md:text-xl text-gray-600">
               Elimine erros no caixa, reduza perdas e aumente sua margem com o sistema que entende a rotina de quem vive do varejo.

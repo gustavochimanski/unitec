@@ -9,7 +9,7 @@ const ComoFazemosDiferenca = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-indigo-800 font-outfit">
-            ERP para supermercados e comércios – por que escolher a Unitec?
+            Com tantas escolhas por aí, por que escolher a Unitec?
           </h2>
 
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -55,6 +55,7 @@ const ComoFazemosDiferenca = () => {
 
 const benefits = [
   "PDV ultra-rápido: sem travamentos e sem risco de perda de dados.",
+  "Implantação rápida e personalizada. 1 a 2 Dias e pronto, sistema novo, equipe treinada",
   "Gestão multi-loja centralizada: estoque, financeiro e relatórios num só lugar.",
   "Metas e indicadores em tempo real: acompanhe seu desempenho minuto a minuto.",
   "Segurança de nível corporativo: Linux, backup automático e criptografia.",

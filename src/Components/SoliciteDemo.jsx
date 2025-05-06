@@ -7,7 +7,7 @@ const SoliciteDemo = () => {
   return (
     <section
       id="contato"
-      className="py-20 md:py-28 bg-gradient-to-tr from-indigo-900 to-sky-500 relative overflow-hidden text-white"
+      className="py-20 md:py-28 bg-gradient-to-tr bg-indigo-800 relative overflow-hidden text-white"
     >
       {/* Elementos de fundo */}
       <div className="absolute inset-0 pointer-events-none">

@@ -76,7 +76,7 @@ const TodasFuncionalidades = () => {
     {
       icon: CreditCard,
       title: "Integrações com TEF e Cartão",
-      description: "Funciona com Stone, Sitef, TEF, entre outros. Mais opções de pagamento, mais vendas no caixa.",
+      description: "Funciona com Stone, Get-net, Safra-pay, SitefExpress(TEF), alimentação, refeição, entre outros. Mais opções de pagamento, mais vendas no caixa.",
     },
     {
       icon: HeadphonesIcon,
