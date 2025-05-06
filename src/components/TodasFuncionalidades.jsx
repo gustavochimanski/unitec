@@ -1,6 +1,8 @@
-import React, { useEffect } from "react"
+"use client"
+
+import { useEffect } from "react"
+import Link from "next/link"
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
 import {
   ArrowRight,
   DollarSign,
@@ -16,16 +18,16 @@ import {
 
 const FeatureItem = ({ icon: Icon, title, description }) => (
   <motion.div
-    className="flex flex-col md:flex-row items-start gap-4 p-6 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg transition-all duration-300 hover:bg-opacity-20"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
+    className="flex flex-col md:flex-row items-start gap-4 p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
   >
     <div className="flex-shrink-0">
-      <Icon className="w-8 h-8 text-[#42B7E9]" />
+      <Icon className="w-8 h-8 text-indigo-800" />
     </div>
     <div>
-      <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
-      <p className="text-white text-opacity-80">{description}</p>
+      <h3 className="text-lg font-semibold mb-1 text-indigo-800">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
   </motion.div>
 )
@@ -38,67 +40,59 @@ const TodasFuncionalidades = () => {
   const features = [
     {
       icon: DollarSign,
-      title: "Gestão Financeira Completa",
-      description:
-        "Controle de fluxo de caixa, contas contábeis e conciliações automáticas. Nunca perca de vista suas finanças.",
+      title: "Gestão Financeira Integrada",
+      description: "Visualize e controle o fluxo de caixa, conciliações bancárias e contas a pagar com agilidade.",
     },
     {
       icon: Package,
-      title: "Controle de Estoque Inteligente",
-      description:
-        "Administre validade, entradas e saídas de produtos com relatórios detalhados. Evite perdas e otimize seu inventário.",
+      title: "Estoque em Tempo Real",
+      description: "Acompanhe entradas, saídas, prazos de validade e evite rupturas com alertas inteligentes.",
     },
     {
       icon: ShoppingCart,
-      title: "PDV Ágil e Confiável",
-      description:
-        "Alta velocidade no atendimento, estabilidade e funcionalidades avançadas como fechamento seguro e sangrias.",
+      title: "PDV Rápido e Estável",
+      description: "Venda mais com frente de caixa veloz, confiável e fácil de operar – até nos horários de pico.",
     },
     {
       icon: Building,
-      title: "Multi-Loja e Multi-Empresa",
-      description:
-        "Controle até 100 empresas ou setores em um único sistema, com integração total e relatórios unificados.",
+      title: "Controle Multi-Loja",
+      description: "Gerencie diversas filiais e empresas com visão consolidada de vendas, estoque e financeiro.",
     },
     {
       icon: FileText,
-      title: "Emissão Automática de NF-e",
-      description: "Geração de notas fiscais e SPED sem complicações, diretamente pela plataforma.",
+      title: "Nota Fiscal Eletrônica e SPED",
+      description: "Emissão automática de NF-e e geração de SPED em conformidade com as exigências fiscais.",
     },
     {
       icon: PieChart,
-      title: "Relatórios e Auditoria",
-      description:
-        "Filtros avançados para gerar relatórios personalizados e exportar dados para dashboards ou planilhas.",
+      title: "Relatórios Inteligentes",
+      description: "Tenha dashboards visuais com indicadores de venda, giro de produto e rentabilidade.",
     },
     {
       icon: Shield,
-      title: "Segurança Máxima",
-      description: "Plataforma Linux que elimina custos com licenças e oferece estabilidade incomparável.",
+      title: "Segurança de Dados Garantida",
+      description: "Infraestrutura Linux, backups automáticos e criptografia – sua informação sempre protegida.",
     },
     {
       icon: CreditCard,
-      title: "Integrações Práticas",
-      description:
-        "Compatível com máquinas de cartão como Stone, Sitef Express e muito mais, para facilitar suas vendas.",
+      title: "Integrações com TEF e Cartão",
+      description: "Funciona com Stone, Sitef, TEF, entre outros. Mais opções de pagamento, mais vendas no caixa.",
     },
     {
       icon: HeadphonesIcon,
-      title: "Suporte Personalizado",
-      description:
-        "Atendimento completo, todos os dias, até as 22h. Garantimos que o sistema esteja 100% funcional e ensinamos sua equipe a usá-lo.",
+      title: "Suporte Especializado 7 Dias por Semana",
+      description: "Atendimento humanizado das 8h às 22h e treinamento completo para sua equipe operar sem erro.",
     },
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#1B4B96] to-[#42B7E9]">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-6">
-          Todas as Funcionalidades Que Seu Negócio Precisa
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-indigo-800 mb-6">
+          Funcionalidades do ERP Unitec para Supermercados e Comércio
         </h2>
-        <p className="text-xl text-center text-white mb-12 max-w-3xl mx-auto">
-          Nosso ERP vai além do básico. Ele é a solução completa que oferece agilidade, precisão e controle para o
-          varejo. Confira as funcionalidades que fazem a diferença no seu dia a dia.
+        <p className="text-lg md:text-xl text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+          Do PDV ao financeiro, nosso sistema de gestão ERP reúne tudo o que seu comércio precisa para crescer com controle, velocidade e simplicidade.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -109,11 +103,11 @@ const TodasFuncionalidades = () => {
 
         <div className="text-center">
           <Link
-            to="/solicitar-demonstracao"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#1B4B96] bg-white hover:bg-opacity-90 transition duration-300"
+            href="/solicitar-demonstracao"
+            className="inline-flex items-center px-6 py-3 rounded-full text-white bg-gradient-to-r bg-indigo-800 hover:scale-110 transition-all shadow-md"
           >
             Solicite uma demonstração
-            <ArrowRight className="ml-2 -mr-1 w-5 h-5" />
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>
       </div>
@@ -122,4 +116,3 @@ const TodasFuncionalidades = () => {
 }
 
 export default TodasFuncionalidades
-

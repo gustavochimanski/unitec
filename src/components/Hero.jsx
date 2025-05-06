@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+"use client"
+
+import Link from "next/link"
+import { useState, useEffect } from "react"
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { name: "Como funciona", href: "#funcionalidades" },
-    { name: "Clientes Satisfeitos", href: "#depoimentos" },
-    { name: "Por que nos escolher", href: "#numeros-qualidade" },
-    { name: "Contato", href: "#contato" },
+    { name: "Como Funciona", href: "#funcionalidades" },
+    { name: "Depoimentos", href: "#depoimentos" },
+    { name: "Diferenciais", href: "#numeros-qualidade" },
+    { name: "Fale Conosco", href: "#contato" },
   ]
 
   const smoothScroll = (e, target) => {
@@ -16,10 +18,7 @@ const Hero = () => {
     const element = document.querySelector(target)
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.pageYOffset
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      })
+      window.scrollTo({ top: offsetTop, behavior: "smooth" })
     }
     setIsMenuOpen(false)
   }
@@ -35,49 +34,38 @@ const Hero = () => {
     <div className="relative min-h-screen bg-white font-inter">
       {/* Navigation */}
       <nav className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <img
-            src="logo.png"
-            alt="Unitec Logo"
-            className="h-6 w-auto"
-          />
-        </div>
+        <img src="logo.png" alt="Logo da Unitec Sistemas ERP" className="h-8 w-auto" />
 
-        {/* Mobile Menu Button */}
-        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-[#1B4B96] p-2">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {isMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
-
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          {navItems.map((item) => (
+          {navItems.map(item => (
             <a
               key={item.name}
               href={item.href}
-              onClick={(e) => smoothScroll(e, item.href)}
-              className="text-[#1B4B96] hover:text-[#42B7E9] transition-colors font-inter"
+              onClick={e => smoothScroll(e, item.href)}
+              className="text-indigo-800 hover:text-indigo-600 transition-colors font-medium"
             >
               {item.name}
             </a>
           ))}
         </div>
+
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden text-indigo-800 p-2"
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <span className="text-2xl">&times;</span> : <span className="text-2xl">&#9776;</span>}
+        </button>
       </nav>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden mt-4 bg-white shadow-lg rounded-lg p-4 flex flex-col">
-          {navItems.map((item) => (
+        <div className="md:hidden bg-white shadow-md rounded-lg mx-4 p-4 space-y-2">
+          {navItems.map(item => (
             <a
               key={item.name}
               href={item.href}
-              onClick={(e) => smoothScroll(e, item.href)}
-              className="block py-2 text-[#1B4B96] hover:text-[#42B7E9] transition-colors font-inter"
+              onClick={e => smoothScroll(e, item.href)}
+              className="block text-indigo-800 hover:text-indigo-600 transition-colors font-medium"
             >
               {item.name}
             </a>
@@ -86,31 +74,31 @@ const Hero = () => {
       )}
 
       {/* Hero Content */}
-      <div className="flex items-center justify-center min-h-[calc(100vh-120px)]">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-2 items-center max-w-7xl mx-auto">
-            <div className="max-w-2xl space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1B4B96] leading-tight font-outfit">
-                Pronto Para Revolucionar Seu Comércio?
-              </h1>
-              <p className="text-lg md:text-xl text-[#42B7E9] leading-relaxed font-inter">
-                Não perca mais tempo com sistemas lentos e complicados. Descubra como nosso ERP pode transformar sua
-                gestão.
-              </p>
-              <Link
-                to="/solicitar-demonstracao"
-                className="inline-flex bg-gradient-to-r from-[#1B4B96] to-[#42B7E9] text-white hover:from-[#42B7E9] hover:to-[#1B4B96] text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all font-medium font-inter"
-              >
-                Solicite Uma Demonstração Agora!
-              </Link>
-            </div>
-            <div className="relative">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%206%20(1)-eVzAYDz5LO0tfkperINn5l7CbvXqr9.png"
-                alt="Dashboard Preview"
-                className="w-full h-auto object-contain"
-              />
-            </div>
+      <div className="flex items-center justify-center min-h-[calc(100vh-120px)] px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-12 items-center">
+          {/* Text */}
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-indigo-800 leading-tight">
+              ERP completo para mercados e comércios: rápido, simples e poderoso.
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600">
+              Elimine erros no caixa, reduza perdas e aumente sua margem com o sistema que entende a rotina de quem vive do varejo.
+            </p>
+            <Link
+              href="/solicitar-demonstracao"
+              className="inline-flex items-center bg-gradient-to-r from-indigo-800 to-indigo-600 text-white text-lg px-8 py-4 rounded-full shadow-lg hover:from-indigo-700 hover:to-indigo-500 transition"
+            >
+              Agende sua demonstração gratuita
+            </Link>
+          </div>
+
+          {/* Image */}
+          <div className="relative">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%206%20(1)-eVzAYDz5LO0tfkperINn5l7CbvXqr9.png"
+              alt="Tela do sistema ERP da Unitec para controle de vendas e estoque"
+              className="w-full h-auto object-contain rounded-lg shadow-md"
+            />
           </div>
         </div>
       </div>
@@ -119,4 +107,3 @@ const Hero = () => {
 }
 
 export default Hero
-

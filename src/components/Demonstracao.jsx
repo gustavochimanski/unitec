@@ -1,6 +1,43 @@
-import React, { useState, useEffect } from "react"
+"use client"
+
+import Link from "next/link"
 import { Shield, Check, ArrowLeft } from "lucide-react"
-import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import {
+  CheckCircle,
+  Settings,
+  FileText,
+  BarChart3,
+  PlugZap,
+  MousePointerClick,
+} from "lucide-react"
+
+const bullets = [
+  {
+    icon: Settings,
+    text: "Implantação rápida e sem complicações",
+  },
+  {
+    icon: CheckCircle,
+    text: "Suporte com consultores especializados!",
+  },
+  {
+    icon: BarChart3,
+    text: "Relatórios customizados para tomada de decisão",
+  },
+  {
+    icon: PlugZap,
+    text: "Integração com sistemas de cartão e balança",
+  },
+  {
+    icon: FileText,
+    text: "Emissão automática de NF-e e SPED",
+  },
+  {
+    icon: MousePointerClick,
+    text: "Interface intuitiva, fácil de usar e treinar a equipe",
+  },
+]
 
 const SolicitarDemonstracao = () => {
   const [formData, setFormData] = useState({
@@ -20,10 +57,7 @@ const SolicitarDemonstracao = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }))
+    setFormData((prevState) => ({ ...prevState, [name]: value }))
   }
 
   const validateForm = () => {
@@ -51,165 +85,109 @@ const SolicitarDemonstracao = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#1B4B96] to-[#42B7E9]">
-        <header className="bg-white py-4 px-6 flex justify-between items-center">
+      <div className="min-h-screen flex flex-col bg-indigo-800">
+        <header className="bg-gradient-to-br bg-white  text-white py-4 px-6 flex justify-between items-center">
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-removebg-preview%20(1)-c4UIPctCZQgVIJJPcKs7eA0V5m2iCI.png"
+            src="/logo.png"
             alt="Unitec Logo"
-            className="h-12 w-auto"
+            className="h-8 w-auto"
           />
-          <Link to="/" className="text-[#1B4B96] hover:text-[#42B7E9] transition-colors flex items-center">
+          <Link href="/" className="hover:text-white/80 transition-colors flex items-center">
             <ArrowLeft className="mr-2" /> Voltar ao Início
           </Link>
         </header>
         <main className="flex-grow flex items-center justify-center px-4 py-12">
-          <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-2xl text-center">
-            <h2 className="text-3xl font-bold text-[#1B4B96]">Obrigado!</h2>
+          <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-md text-center">
+            <h2 className="text-3xl font-bold text-indigo-800">Obrigado!</h2>
             <p className="text-lg text-gray-600">
               Recebemos sua solicitação. Um de nossos especialistas entrará em contato em breve para agendar a
               demonstração.
             </p>
-            <a href="/" className="inline-flex items-center text-[#1B4B96] hover:text-[#42B7E9]">
+            <Link href="/" className="inline-flex items-center text-indigo-800 hover:text-indigo-600">
               <ArrowLeft className="mr-2" /> Voltar ao Início
-            </a>
+            </Link>
           </div>
         </main>
-        <footer className="bg-white py-4 text-center text-gray-600 text-sm">
-          © {new Date().getFullYear()} Unitec. Todos os direitos reservados.
-        </footer>
+
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#1B4B96] to-[#42B7E9]">
-      <header className="bg-white py-4 px-6 flex justify-between items-center">
-        <Link to="/" className="text-[#1B4B96] hover:text-[#42B7E9] transition-colors flex items-center">
+    <div className="flex flex-col min-h-screen bg-white">
+      <header className="bg-indigo-800  text-white py-4 px-6">
+        <Link href="/" className="hover:text-white/80 transition-colors flex items-center">
           <ArrowLeft className="mr-2" /> Voltar ao Início
         </Link>
       </header>
-      <main className="flex-grow flex items-center justify-center px-4 py-12">
-        <div className="max-w-4xl w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column */}
-            <div className="text-white text-center lg:text-left">
-              <h1 className="text-4xl font-bold mb-6">Transforme Seu Negócio com Nosso ERP</h1>
-              <p className="text-xl mb-8 text-white/90">
-                Solicite uma demonstração gratuita e descubra como podemos simplificar sua gestão e impulsionar seus
-                resultados.
-              </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 space-y-4 inline-block">
-                {["Demonstração 100% personalizada", "Suporte especializado", "Aumente sua produtividade"].map(
-                  (benefit, index) => (
-                    <div key={index} className="flex items-center justify-center lg:justify-start">
-                      <Check className="h-5 w-5 text-green-400 mr-3" />
-                      <span>{benefit}</span>
-                    </div>
-                  ),
-                )}
-              </div>
-            </div>
 
-            {/* Right Column - Form */}
-            <div className="backdrop-blur-sm">
-              <h2 className="text-2xl font-bold text-white mb-8 text-center lg:text-left">Solicite Sua Demonstração</h2>
-              <form className="space-y-6" onSubmit={handleSubmit}>
-                <div>
-                  <label htmlFor="nome" className="block text-sm font-medium text-gray-700">
-                    Nome completo
-                  </label>
-                  <input
-                    id="nome"
-                    name="nome"
-                    type="text"
-                    required
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#42B7E9] focus:border-[#42B7E9] sm:text-sm"
-                    value={formData.nome}
-                    onChange={handleChange}
-                  />
-                  {errors.nome && <p className="text-red-500 text-xs mt-1">{errors.nome}</p>}
-                </div>
-                <div>
-                  <label htmlFor="empresa" className="block text-sm font-medium text-gray-700">
-                    Nome da empresa
-                  </label>
-                  <input
-                    id="empresa"
-                    name="empresa"
-                    type="text"
-                    required
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#42B7E9] focus:border-[#42B7E9] sm:text-sm"
-                    value={formData.empresa}
-                    onChange={handleChange}
-                  />
-                  {errors.empresa && <p className="text-red-500 text-xs mt-1">{errors.empresa}</p>}
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    E-mail corporativo
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#42B7E9] focus:border-[#42B7E9] sm:text-sm"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                  {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-                </div>
-                <div>
-                  <label htmlFor="whatsapp" className="block text-sm font-medium text-gray-700">
-                    WhatsApp
-                  </label>
-                  <input
-                    id="whatsapp"
-                    name="whatsapp"
-                    type="tel"
-                    required
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#42B7E9] focus:border-[#42B7E9] sm:text-sm"
-                    value={formData.whatsapp}
-                    onChange={handleChange}
-                  />
-                  {errors.whatsapp && <p className="text-red-500 text-xs mt-1">{errors.whatsapp}</p>}
-                </div>
-                <div>
-                  <label htmlFor="descricao" className="block text-sm font-medium text-gray-700">
-                    Descreva brevemente seu negócio (opcional)
-                  </label>
-                  <textarea
-                    id="descricao"
-                    name="descricao"
-                    rows={3}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#42B7E9] focus:border-[#42B7E9] sm:text-sm"
-                    value={formData.descricao}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div>
-                  <button
-                    type="submit"
-                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-[#1B4B96] to-[#42B7E9] hover:from-[#42B7E9] hover:to-[#1B4B96] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#42B7E9] transition-all duration-300 ease-in-out transform hover:scale-105"
-                  >
-                    Quero Minha Demonstração
-                  </button>
-                </div>
-              </form>
-              <div className="flex items-center justify-center mt-6">
-                <Shield className="h-5 w-5 text-[#1B4B96] mr-2" />
-                <p className="text-xs text-gray-500">Seus dados estão protegidos. Não compartilhamos informações.</p>
-              </div>
-            </div>
+      <main className="flex-grow flex items-center justify-center px-4 py-12">
+        <div className="max-w-5xl w-full grid lg:grid-cols-2 gap-12 items-start">
+          {/* Info Lateral */}
+          <div className="text-indigo-800">
+            <h1 className="text-4xl font-bold mb-6">Transforme Seu Negócio com Nosso ERP</h1>
+            <p className="text-lg mb-6 text-gray-700">
+              Solicite uma demonstração gratuita e descubra como podemos simplificar sua gestão e impulsionar seus
+              resultados.
+            </p>
+            <ul className="space-y-3">
+            {bullets.map((item, index) => (
+              <li key={index} className="flex items-start text-gray-700">
+                <item.icon className="w-5 h-5 text-indigo-700 mt-1 mr-3" />
+                <span>{item.text}</span>
+              </li>
+            ))}
+            </ul>
           </div>
+
+          {/* Formulário */}
+          <form className="space-y-6 bg-white p-6 rounded-lg shadow-md" onSubmit={handleSubmit}>
+            {["nome", "empresa", "email", "whatsapp"].map((field) => (
+              <div key={field}>
+                <label htmlFor={field} className="block text-sm font-medium text-gray-700 capitalize">
+                  {field === "whatsapp" ? "WhatsApp" : field}
+                </label>
+                <input
+                  id={field}
+                  name={field}
+                  type={field === "email" ? "email" : "text"}
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  value={formData[field]}
+                  onChange={handleChange}
+                />
+                {errors[field] && <p className="text-red-500 text-xs mt-1">{errors[field]}</p>}
+              </div>
+            ))}
+            <div>
+              <label htmlFor="descricao" className="block text-sm font-medium text-gray-700">
+                Descreva seu negócio (opcional)
+              </label>
+              <textarea
+                id="descricao"
+                name="descricao"
+                rows={3}
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                value={formData.descricao}
+                onChange={handleChange}
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-indigo-800 hover:bg-indigo-700 text-white py-2 px-4 rounded-md text-sm font-medium transition"
+            >
+              Quero Minha Demonstração
+            </button>
+            <div className="flex items-center justify-center mt-4">
+              <Shield className="h-4 w-4 text-indigo-800 mr-2" />
+              <p className="text-xs text-gray-500">Seus dados estão protegidos.</p>
+            </div>
+          </form>
         </div>
       </main>
-      <footer className="bg-white py-4 text-center text-gray-600 text-sm">
-        © {new Date().getFullYear()} Unitec. Todos os direitos reservados.
-      </footer>
+
+
     </div>
   )
 }
 
 export default SolicitarDemonstracao
-

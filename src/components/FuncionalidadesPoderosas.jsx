@@ -1,4 +1,7 @@
-import React, { useEffect, useRef } from "react"
+"use client"
+
+import Link from "next/link"
+import { useRef, useEffect } from "react"
 import {
   FileText,
   ArrowUpDown,
@@ -8,26 +11,28 @@ import {
   ShieldCheck,
   ArrowRight,
 } from "lucide-react"
-import { Link, useLocation } from "react-router-dom"
 
 const FuncionalidadesPoderosas = () => {
-  const location = useLocation()
   const sectionRef = useRef(null)
 
   useEffect(() => {
-    if (location.hash === "#funcionalidades") {
+    const hash = window.location.hash
+    if (hash === "#funcionalidades") {
       setTimeout(() => {
         sectionRef.current?.scrollIntoView({ behavior: "smooth" })
       }, 100)
     } else {
       window.scrollTo(0, 0)
     }
-  }, [location])
+  }, [])
 
   return (
-    <section ref={sectionRef}  className="py-16 md:py-24 bg-gray-50">
+    <section ref={sectionRef} className="py-16 md:py-24 bg-slate-100">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 id="funcionalidades" className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 text-[#1B4B96] font-outfit">
+        <h2
+          id="funcionalidades"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 text-indigo-800 font-outfit"
+        >
           Tudo o que Você Precisa em um Só Lugar
         </h2>
         <p className="text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 text-gray-700">
@@ -42,8 +47,8 @@ const FuncionalidadesPoderosas = () => {
 
         <div className="text-center">
           <Link
-            to="/funcionalidades"
-            className="inline-flex items-center bg-white border-2 border-[#1B4B96] text-[#1B4B96] font-semibold py-3 px-8 rounded-full hover:bg-[#1B4B96] hover:text-white transition duration-300 shadow-md"
+            href="/funcionalidades"
+            className="inline-flex items-center bg-white border-2 border-indigo-800 text-indigo-800 font-semibold py-3 px-8 rounded-full hover:bg-indigo-800 hover:text-white transition duration-300 shadow-md"
           >
             Confira Todas as Funcionalidades
             <ArrowRight className="ml-2 w-5 h-5" />
@@ -55,12 +60,12 @@ const FuncionalidadesPoderosas = () => {
 }
 
 const FuncionalidadeCard = ({ icon: Icon, title, description }) => (
-  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-[#42B7E9]">
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 border-t-4 border-indigo-800">
     <div className="flex items-center mb-4">
-      <div className="bg-[#1B4B96] p-3 rounded-full mr-4">
+      <div className="bg-indigo-800 p-3 rounded-full mr-4">
         <Icon className="w-6 h-6 text-white" />
       </div>
-      <h3 className="text-xl font-semibold text-[#1B4B96]">{title}</h3>
+      <h3 className="text-xl font-semibold text-indigo-800">{title}</h3>
     </div>
     <p className="text-gray-600">{description}</p>
   </div>
@@ -100,4 +105,3 @@ const funcionalidades = [
 ]
 
 export default FuncionalidadesPoderosas
-
