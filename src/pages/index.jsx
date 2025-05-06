@@ -4,7 +4,7 @@ import ComoFazemosDiferenca from "./Components/ComoFazemosDiferença";
 import FuncionalidadesPoderosas from "./Components/FuncionalidadesPoderosas";
 import TestimonialsSection from "./Components/TestimonialsSection"; // <-- CORRIGIDO
 import NumerosQualidade from "./Components/NumerosQualidade";
-import SuportePersonalizado from "./Components/SuportePersonalizado"; // <-- CORRIGIDO
+import SuportePersonalizado from "./Components/SuportPersonalizado"; // <-- CORRIGIDO
 import SoliciteDemo from "./Components/SoliciteDemo";
 import Footer from "./Components/Footer";
 
