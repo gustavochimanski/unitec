@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { generateSitemapXml, SitemapRoute } from "@/pages/lib/sitemap";
+import { generateSitemapXml, SitemapRoute } from "@/lib/sitemap";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date().toISOString();

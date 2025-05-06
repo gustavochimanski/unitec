@@ -1,6 +1,6 @@
 "use client"
 
-import SolicitarDemonstracao from "../Components/SoliciteDemo"
+import SolicitarDemonstracao from "../../Components/SoliciteDemo"
 
 
 

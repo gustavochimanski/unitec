@@ -33,7 +33,7 @@
     "**/*.tsx",
     "next-env.d.ts",
     ".next/types/**/*.ts"
-, "src/pages/Components/ComoFazemosDiferença.jsx"  ],
+, "src/Components/ComoFazemosDiferença.jsx"  ],
   "exclude": [
     "node_modules"
   ]
