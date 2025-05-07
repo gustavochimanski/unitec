@@ -7,7 +7,7 @@ const SoliciteDemo = () => {
   return (
     <section
       id="contato"
-      className="py-20 md:py-28 bg-gradient-to-tr bg-indigo-800 relative overflow-hidden text-white"
+      className="py-20 md:py-28 bg-gradient-to-tr bg-indigo-800 relative overflow-hidden text-white font-sans"
     >
       {/* Elementos de fundo */}
       <div className="absolute inset-0 pointer-events-none">
@@ -16,10 +16,10 @@ const SoliciteDemo = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-6 text-center max-w-3xl">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-outfit leading-tight">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-sans leading-tight">
           Quer Levar Seu Negócio ao Próximo Nível?
         </h2>
-        <p className="text-lg md:text-xl mb-10 text-white/90 font-inter">
+        <p className="text-lg md:text-xl mb-10 text-white/90 font-sans">
           Dê adeus às dores de cabeça com sistemas ultrapassados. Descubra como nosso ERP pode turbinar sua operação.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">

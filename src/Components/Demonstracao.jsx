@@ -114,7 +114,7 @@ const SolicitarDemonstracao = () => {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white font-sans">
       <header className="bg-indigo-800  text-white py-4 px-6">
         <Link href="/" className="hover:text-white/80 transition-colors flex items-center">
           <ArrowLeft className="mr-2" /> Voltar ao Início
@@ -125,7 +125,7 @@ const SolicitarDemonstracao = () => {
         <div className="max-w-5xl w-full grid lg:grid-cols-2 gap-12 items-start">
           {/* Info Lateral */}
           <div className="text-indigo-800">
-            <h1 className="text-4xl font-bold mb-6">Transforme Seu Negócio com Nosso ERP</h1>
+            <h1 className="text-4xl font-bold mb-6 font-sans">Transforme Seu Negócio com Nosso ERP</h1>
             <p className="text-lg mb-6 text-gray-700">
               Solicite uma demonstração gratuita e descubra como podemos simplificar sua gestão e impulsionar seus
               resultados.

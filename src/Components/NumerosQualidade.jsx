@@ -6,7 +6,7 @@ const NumerosQualidade = () => {
   return (
     <section
       id="numeros-qualidade"
-      className="py-16 md:py-24 bg-slate-100 text-indigo-800"
+      className="py-16 md:py-24 bg-slate-100 text-indigo-800 font-sans"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -65,7 +65,7 @@ const stats = [
   },
   {
     icon: ShoppingCart,
-    number: "+200",
+    number: "+400",
     text: "supermercados e redes comerciais atendidos",
   },
   {
@@ -75,8 +75,8 @@ const stats = [
   },
   {
     icon: Star,
-    number: "4.9/5",
-    text: "avaliação média entre nossos clientes ativos",
+    number: "Multi Empresas",
+    text: "Focado em Supermercado, mas total integração com distribuidoras, indústria, padarias e comércios no geral",
   },
 ]
 

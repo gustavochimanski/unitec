@@ -6,9 +6,9 @@ import Image from "next/image"
 
 const ProblemsSection = () => {
   return (
-<section className="bg-slate-100 py-16 md:py-24">
+<section className="bg-slate-100 py-16 md:py-24 font-sans" >
   <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-    <h2 className="text-4xl md:text-5xl font-bold text-indigo-800 text-center mb-4 font-outfit">
+    <h2 className="text-4xl md:text-5xl font-bold text-indigo-800 text-center mb-4">
       Seu supermercado sofre com esses problemas?
     </h2>
     <p className="text-lg md:text-xl text-gray-700 text-center max-w-3xl mx-auto mb-12">
@@ -35,8 +35,8 @@ const ProblemsSection = () => {
         />
         <HighlightCard
           icon={<Target className="w-8 h-8 text-indigo-800" />}
-          title="Defina metas e veja o progresso"
-          description="Estabeleça objetivos de vendas e acompanhe cada meta no painel em tempo real."
+          title="Empresa sem metas definidas automaticamente"
+          description="Uma empresa sem metas claras e definidas, não sabe pra onde ir! Estabeleça metas, ou deixe que nossa IA crie as metas sozinhas com base a períodos anteriores"
         />
       </div>
 
@@ -70,7 +70,7 @@ const HighlightCard = ({
     <div className="flex items-start">
       <div className="mr-4">{icon}</div>
       <div>
-        <h3 className="text-indigo-800 font-semibold text-lg mb-1 font-outfit">{title}</h3>
+        <h3 className="text-indigo-800 font-semibold font-sans text-lg mb-1 font-outfit">{title}</h3>
         <p className="text-gray-600">{description}</p>
       </div>
     </div>

@@ -86,7 +86,7 @@ const TodasFuncionalidades = () => {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section id="funcionalidades" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-indigo-800 mb-6">
           Funcionalidades do ERP Unitec para Supermercados e Comércio

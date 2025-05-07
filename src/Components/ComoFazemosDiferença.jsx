@@ -5,7 +5,7 @@ import { CheckCircle } from "lucide-react"
 
 const ComoFazemosDiferenca = () => {
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section className="bg-white py-16 md:py-24 font-sans">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-indigo-800 font-outfit">

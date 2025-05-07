@@ -4,7 +4,7 @@ import { HeadphonesIcon, Users, Cog, Calendar } from "lucide-react"
 
 const SuportePersonalizado = () => {
   return (
-    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden font-sans">
       {/* Background decorativo suave */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute top-0 left-0 w-64 h-64 bg-indigo-800 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
@@ -53,7 +53,7 @@ const SupportFeature = ({
       <Icon className="w-6 h-6 text-indigo-800" />
     </div>
     <div>
-      <h3 className="text-xl font-semibold mb-1 text-indigo-800">{title}</h3>
+      <h3 className="text-xl font-semibold mb-1 text-indigo-800 font-sans">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   </div>

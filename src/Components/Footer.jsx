@@ -1,19 +1,23 @@
 "use client"
 
 import { Mail, Phone } from "lucide-react"
+import Image from "next/image"
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-indigo-800 py-16 border-t border-slate-200">
+    <footer className="bg-white text-indigo-800 py-16 border-t border-slate-200 font-sans">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8 items-start">
           {/* Logo e Slogan */}
           <div className="md:col-span-2 text-center md:text-left">
-            <img
-              src="logo.png"
-              alt="Unitec Logo"
-              className="h-10 w-auto mb-6 mx-auto md:mx-0"
-            />
+          <Image
+            src="/logo.png"
+            alt="Unitec Logo"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="h-10 w-auto mb-6 mx-auto md:mx-0"
+          />
             <p className="text-sm text-gray-600">
               Tecnologia de ponta para simplificar o varejo. Mais do que software: parceria.
             </p>

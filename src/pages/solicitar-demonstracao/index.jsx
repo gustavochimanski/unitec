@@ -1,8 +1,6 @@
 "use client"
 
-import SolicitarDemonstracao from "../../Components/SoliciteDemo"
-
-
+import SolicitarDemonstracao from "../../Components/Demonstracao"
 
 
 export default function SolicitarDemonstracaoPage() {

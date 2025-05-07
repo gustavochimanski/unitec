@@ -27,7 +27,7 @@ const FuncionalidadesPoderosas = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 bg-slate-100">
+    <section ref={sectionRef} className="py-16 md:py-24 bg-slate-100 font-sans">
       <div className="container mx-auto px-4 md:px-6">
         <h2
           id="funcionalidades"
@@ -65,7 +65,7 @@ const FuncionalidadeCard = ({ icon: Icon, title, description }) => (
       <div className="bg-indigo-800 p-3 rounded-full mr-4">
         <Icon className="w-6 h-6 text-white" />
       </div>
-      <h3 className="text-xl font-semibold text-indigo-800">{title}</h3>
+      <h3 className="text-xl font-semibold text-indigo-800 font-sans">{title}</h3>
     </div>
     <p className="text-gray-600">{description}</p>
   </div>
