@@ -150,12 +150,12 @@ const Hero = () => {
                   <div className="w-full md:w-1/2 p-6 bg-white flex flex-col justify-center text-center md:text-left">
                       <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest">De</p>
                     <div className="flex mx-auto">
-                      <p className=" text-5xl md:text-5xl  font-bold text-gray-400 line-through mb-2">1.599,00</p>
+                      <p className=" text-5xl md:text-5xl  font-bold text-gray-400 line-through mb-2">3.599,00</p>
                       <p className="text-2xl md:text-2xl  font-black text-gray-400">R$</p>
                     </div>
                     <p className="text-xs md:text-sm font-semibold text-gray-500 uppercase tracking-widest">Por apenas</p>
                     <div className="flex mx-auto">
-                      <p className="text-4xl md:text-4xl font-black text-green-600">599,00</p>
+                      <p className="text-4xl md:text-4xl font-black text-green-600">1899,00</p>
                       <p className="text-sm md:text-sm font-black text-green-600">R$</p>
                     </div>
 
