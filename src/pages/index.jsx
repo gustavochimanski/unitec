@@ -1,6 +1,4 @@
 import HeroStoreScroll from "@/Components/sections/HeroStoreScroll"
-import AudiencesSection from "@/Components/sections/AudiencesSection"
-import ProblemsSection from "@/Components/sections/ProblemsSection"
 import FeatureShowcase from "@/Components/sections/FeatureShowcase"
 import AppGallery from "@/Components/sections/AppGallery"
 import OperatorGallery from "@/Components/sections/OperatorGallery"
@@ -26,19 +24,9 @@ function Home() {
         navItems={content.navItems}
       />
 
-      {content.audiences && (
-        <AudiencesSection
-          title={content.audiences.title}
-          subtitle={content.audiences.subtitle}
-          items={content.audiences.items}
-        />
-      )}
+      <AppGallery />
 
-      <ProblemsSection
-        title={content.problems.title}
-        subtitle={content.problems.subtitle}
-        items={content.problems.items}
-      />
+      <OperatorGallery />
 
       <FeatureShowcase
         title="Funcionalidades de verdade, nas telas de verdade"
@@ -47,10 +35,6 @@ function Home() {
         ctaLabel="Ver todas as funcionalidades"
         ctaHref="/funcionalidades"
       />
-
-      <AppGallery />
-
-      <OperatorGallery />
 
       <DifferentialsSection
         title={content.differentials.title}

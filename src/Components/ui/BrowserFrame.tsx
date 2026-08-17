@@ -19,7 +19,9 @@ const BrowserFrame = ({ src, alt, className = "" }: BrowserFrameProps) => {
           mensura.app
         </span>
       </div>
-      <img src={src} alt={alt} className="w-full h-auto block" />
+      <div className="relative">
+        <img src={src} alt={alt} className="w-full h-auto block" />
+      </div>
     </div>
   )
 }

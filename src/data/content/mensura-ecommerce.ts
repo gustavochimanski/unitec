@@ -23,7 +23,6 @@ export const mensuraEcommerceContent: ProductPageContent = {
     badge: "Feito para atacado e varejo de bebidas e mercearia",
   },
   navItems: [
-    { name: "Para quem", href: "#para-quem" },
     { name: "Funcionalidades", href: "#funcionalidades" },
     { name: "Planos", href: "#planos" },
     { name: "Contato", href: "#contato" },
@@ -181,11 +180,11 @@ export const mensuraEcommerceContent: ProductPageContent = {
   pricing: {
     title: "Planos Mensura E-commerce",
     subtitle:
-      "Primeiro mês grátis em todos os planos. Comece com 1 loja e cresça para 3 quando a operação pedir.",
+      "2 primeiros meses grátis, sem compromisso, em todos os planos. Comece com 1 loja e cresça para 3 quando a operação pedir.",
   },
   cta: {
     title: "Pronto para vender online do seu jeito?",
     subtitle:
-      "Chame no WhatsApp e veja o catálogo, o pedido B2B e a entrega funcionando no fluxo da sua distribuidora ou mercado.",
+      "2 primeiros meses grátis, sem compromisso. Chame no WhatsApp e veja o catálogo, o pedido B2B e a entrega funcionando no fluxo da sua distribuidora ou mercado.",
   },
 }

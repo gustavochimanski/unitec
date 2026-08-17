@@ -13,7 +13,7 @@ export const mensuraEcommercePlans: Plan[] = [
       { name: "Kanban", description: "Pedidos do consumidor em um painel" },
     ],
     features: [
-      "1º mês grátis",
+      "2 primeiros meses grátis",
       "1 loja / 1 unidade",
       "Catálogo digital para o consumidor",
       "WhatsApp para confirmar pedidos",
@@ -35,7 +35,7 @@ export const mensuraEcommercePlans: Plan[] = [
       { name: "Entrega", description: "Separação, rotas e app do entregador" },
     ],
     features: [
-      "1º mês grátis",
+      "2 primeiros meses grátis",
       "Até 3 lojas",
       "Tabelas de preço por cliente ou região",
       "Pedidos pelo site e pelo WhatsApp",
@@ -58,7 +58,7 @@ export const mensuraEcommercePlans: Plan[] = [
       { name: "Indicadores", description: "Vendas por cliente e por rota" },
     ],
     features: [
-      "1º mês grátis",
+      "2 primeiros meses grátis",
       "Unidades e CDs ilimitados",
       "B2B e B2C no mesmo contrato",
       "Rotas, vendedores e carteira de clientes",

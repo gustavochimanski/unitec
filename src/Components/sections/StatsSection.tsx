@@ -13,8 +13,8 @@ const StatsSection = ({ title, subtitle, items }: StatsSectionProps) => {
     <section className="py-16 md:py-24 bg-slate-100 text-indigo-800 font-sans">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">{title}</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">{title}</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">

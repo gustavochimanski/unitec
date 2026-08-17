@@ -1,24 +1,17 @@
 "use client"
 
-import ScrollPhoneGallery from "@/Components/sections/ScrollPhoneGallery"
-
-const operatorShots = [
-  {
-    src: "/screenshots/funcionarios/fila-conferencia.jpeg",
-    alt: "Fila de conferência eletrônica no app do funcionário",
-    title: "Fila de conferência no celular",
-    description:
-      "O operador abre o app e vê os pedidos do período. Código, valor, delivery e o que ainda falta conferir — continua de onde parou, sem papel no depósito.",
-  },
-]
+import PhoneShowcase from "@/Components/sections/PhoneShowcase"
+import { videos } from "@/data/videos"
 
 const OperatorGallery = () => {
   return (
-    <ScrollPhoneGallery
-      shots={operatorShots}
-      badge="App dos funcionários"
-      sectionId="app-funcionarios"
+    <PhoneShowcase
+      id="app-funcionarios"
       className="bg-slate-100"
+      badge="App dos funcionários"
+      title="Conferência eletrônica, sem papel"
+      description="O operador confere item a item, marca o pedido como pronto e vincula ao motoboy — a fila anda no celular, não no depósito."
+      video={videos.funcionarios}
     />
   )
 }

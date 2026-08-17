@@ -51,7 +51,7 @@ const ScrollPhoneGallery = ({ shots, badge, sectionId, className = "bg-white" }:
       style={{ height: shots.length <= 1 ? "auto" : `${heightVh}vh` }}
     >
       <div className={`${shots.length <= 1 ? "relative" : "sticky top-0"} h-[100dvh] flex flex-col`}>
-        <div className="flex-1 min-h-0 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-8 grid grid-rows-[auto_auto] lg:grid-rows-1 lg:grid-cols-2 gap-3 lg:gap-12 lg:items-center overflow-y-auto">
+        <div className="flex-1 min-h-0 max-w-7xl w-full mx-auto px-4 lg:px-8 py-4 lg:py-8 grid grid-rows-[auto_auto] lg:grid-rows-1 lg:grid-cols-2 gap-3 lg:gap-12 lg:items-center overflow-y-auto">
           <div className="order-1 lg:order-2 flex items-center justify-center py-1">
             <PhoneStack shots={shots} active={active} />
           </div>
