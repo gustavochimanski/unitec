@@ -1,0 +1,71 @@
+import type { Plan } from "@/types/product"
+
+export const mensuraEcommercePlans: Plan[] = [
+  {
+    id: "1-loja",
+    name: "1 loja",
+    tagline: "Loja online para 1 ponto de venda",
+    price: 499,
+    firstMonthFree: true,
+    modules: [
+      { name: "Catálogo", description: "Produtos, categorias e ofertas" },
+      { name: "Checkout", description: "PIX, cartão e entrega no bairro" },
+      { name: "Kanban", description: "Pedidos do consumidor em um painel" },
+    ],
+    features: [
+      "1º mês grátis",
+      "1 loja / 1 unidade",
+      "Catálogo digital para o consumidor",
+      "WhatsApp para confirmar pedidos",
+      "PIX e cartão no checkout",
+      "Suporte em horário comercial",
+    ],
+    cta: "Começar com 1 loja",
+  },
+  {
+    id: "3-lojas",
+    name: "3 lojas",
+    tagline: "Até 3 lojas no mesmo fluxo",
+    price: 1199,
+    featured: true,
+    firstMonthFree: true,
+    modules: [
+      { name: "Catálogo B2B", description: "Login do lojista e tabelas de preço" },
+      { name: "Comercial", description: "Pedido mínimo, crédito e prazo" },
+      { name: "Entrega", description: "Separação, rotas e app do entregador" },
+    ],
+    features: [
+      "1º mês grátis",
+      "Até 3 lojas",
+      "Tabelas de preço por cliente ou região",
+      "Pedidos pelo site e pelo WhatsApp",
+      "Kanban de separação no depósito",
+      "App de entregadores com status",
+      "Suporte estendido até 22h",
+    ],
+    cta: "Escolher 3 lojas",
+  },
+  {
+    id: "rede",
+    name: "Rede",
+    tagline: "Mais de 3 lojas no mesmo fluxo",
+    price: null,
+    priceLabel: "Sob consulta",
+    firstMonthFree: true,
+    modules: [
+      { name: "Tudo do plano 3 lojas", description: "Sem teto operacional" },
+      { name: "Multi-unidade", description: "Lojas, CDs e regiões" },
+      { name: "Indicadores", description: "Vendas por cliente e por rota" },
+    ],
+    features: [
+      "1º mês grátis",
+      "Unidades e CDs ilimitados",
+      "B2B e B2C no mesmo contrato",
+      "Rotas, vendedores e carteira de clientes",
+      "Dashboards de ruptura e recompra",
+      "Integração com estoque e faturamento",
+      "Gerente de conta dedicado",
+    ],
+    cta: "Falar com especialista",
+  },
+]

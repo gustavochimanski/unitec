@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .hero-text h1 {
   font-size: 2.5rem;
@@ -37,8 +48,9 @@ body {
 
 /* Cores da marca */
 :root {
-  --color-primary: #1B4B96;
-  --color-secondary: #42B7E9;
+  --color-primary: #3730a3;
+  --color-secondary: #4338ca;
+  --color-canvas: #f1f5f9;
 }
 
 /* Estilos específicos para o Hero */

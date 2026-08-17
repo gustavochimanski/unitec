@@ -7,7 +7,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const routes: SitemapRoute[] = [
     { loc: "/", changefreq: "weekly", priority: 1.0, lastmod: now },
     { loc: "/funcionalidades", changefreq: "monthly", priority: 0.8, lastmod: now },
-    { loc: "/solicitar-demonstracao", changefreq: "monthly", priority: 0.7, lastmod: now },
   ];
 
   const xml = generateSitemapXml(routes);

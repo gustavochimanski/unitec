@@ -139,7 +139,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <ChartNoAxesCombined  className="mx-auto my-1 "/>
-                    <div className="font-bold font-sans">Mensura BI</div>
+                    <div className="font-bold font-sans">Dashboards</div>
                     <div className="text-sm font-sans text-gray-300">Visão Ampla do Negócio</div>
                   </div>
                 </div>
